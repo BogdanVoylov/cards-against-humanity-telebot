@@ -22,10 +22,12 @@ bot = telebot.TeleBot('910878205:AAEFZrgTK5bwUEv8BrX0-fW0aweJ86sgzbw')
 def start(message):
     chatId = message.chat.id
     if chatId in last_message:
+        num_of_players = 0
         if chatId in game_chatId:
+            num_of_players = len(game_chatId[last_message[chatId]])
             game_chatId[last_message[chatId]].remove(chatId)
 
-        if len(game_chatId[last_message[chatId]]) == 0:
+        if num_of_players == 1:
             del game_password[last_message[chatId]]
             del game_chatId[last_message[chatId]]
 
