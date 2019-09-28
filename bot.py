@@ -16,7 +16,7 @@ chatId_score = {}
 chatId_userName = {}
 wcards = []
 bcards = []
-bot = telebot.TeleBot('910878205:AAEFZrgTK5bwUEv8BrX0-fW0aweJ86sgzbw')
+bot = telebot.TeleBot('API_TOKEN')#910878205:AAEFZrgTK5bwUEv8BrX0-fW0aweJ86sgzbw - @C_A_H_bot. I`ll be happy if someone host it)))
 
 @bot.message_handler(commands=['start', 'help'])
 def start(message):
